@@ -179,7 +179,7 @@ const flowerItems = flower.map((items, index) => {
         {fruitItems[0]}
         {fruitItems[1]}
         {fruitItems[3]}
-        {fruitItems[5]}
+        
         
         
       </div>
@@ -197,7 +197,7 @@ const flowerItems = flower.map((items, index) => {
         {vegetableItems[11]}
         {vegetableItems[18]}
         {vegetableItems[5]}
-        {vegetableItems[10]}
+        
         
       </div>
       <Link className='btn btn-outline-light btn-lg' to='/vegetables' role='button'>
@@ -215,7 +215,7 @@ const flowerItems = flower.map((items, index) => {
         {flowerItems[11]}
         {flowerItems[12]}
         {flowerItems[13]}
-        {flowerItems[17]}
+        
        
       </div>
       <Link className='btn btn-outline-light btn-lg' to='/flowers' role='button'>

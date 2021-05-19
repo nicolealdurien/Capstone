@@ -156,7 +156,8 @@ const flowerItems = flower.map((items, index) => {
         
         style={{ backgroundImage: "url('#')" }}
       >
-        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', height: 300 }}>
+        
+        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
               <h1 className='mb-3'>FruVe Flow</h1>
@@ -167,6 +168,7 @@ const flowerItems = flower.map((items, index) => {
             </div>
           </div>
         </div>
+        
         <br />
         <div className='cards'>
         <>

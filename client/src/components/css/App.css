@@ -256,7 +256,7 @@
   border-spacing: 10px; /*Optional*/
 }
 .Column {
-  display: inline-flex;;
+  display: inline-flex;
    /*Optional*/
 }
 
@@ -268,3 +268,8 @@
 .deliverbtn {
   width: 200px;
 }
+
+.mask{
+  padding-bottom: 27px;
+}
+

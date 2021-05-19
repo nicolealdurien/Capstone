@@ -109,7 +109,7 @@ function Staff(props) {
                      )})}</p>
             </div>
             <div>
-            <button onClick = {() => handleNotDeliveried({items})}><p> Mark As Not Delivered</p></button>
+            <button className="deliverbtn" onClick = {() => handleNotDeliveried({items})}><p> Mark As Not Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
@@ -243,11 +243,11 @@ function Staff(props) {
 
     return<div>
        <div className='center'>
-           <div><h2>Pending Order</h2></div>
+           <div><h2>Pending Orders</h2></div>
            <div>{pending_ordersItems}</div>
        </div>
-       <div>
-       <div><h2>Completed Order</h2></div>
+       <div className='center'>
+       <div><h2>Completed Orders</h2></div>
            <div>{completed_ordersItems}</div>
            
        </div>

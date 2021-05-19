@@ -28,7 +28,7 @@ router.patch('/update-product/:productId', authenticate, updateProduct)
 
 router.delete('/delete-product/:productId', authenticate, deleteProduct)
 
-router.get('/admin-profile', authenticate, getAdminData)
+router.get('/product-manage', authenticate, getAdminData)
 
 router.post ('/add-products', authenticate, addProduct)
 

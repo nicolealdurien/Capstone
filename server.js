@@ -231,40 +231,7 @@ app.post ('/order-confirmation', (req, res) => {
 })
 
 
-// stripe payment route #1 - now superseded
-// app.post('/payment', (req, res) => {
-//   const { product, token } = req.body
-
-  // console.log('PRODUCT: ', product.name)
-  // console.log('PRICE: $', product.rate)
-  // const idempotencyKey = Math.random()
-
-  // return stripe.customers.create({
-  //     email: token.email,
-  //     source: token.id
-  // }).then(customer => {
-  //     stripe.charges.create({
-//           amount: Math.round(product.rate * 100),
-//           currency: 'usd',
-//           customer: customer.id,
-//           receipt_email: token.email,
-//           description: `Purchase from FruveFlow`,
-//           shipping: {
-//               name: token.card.name,
-//               address: {
-//                   country: token.card.address_country
-//               }
-//           }
-//       }, {idempotencyKey})
-//   }).then(result => {
-//     console.log(result)
-//     res.status(200).json(result)
-//     })
-//   .catch(err => console.log(err))
-// })
-
-
-// stripe payment route #2 - now fully functional!
+// stripe payment route 
 app.post('/nonmodalpayment', cors(), async (req, res) => {
   let {amount, id} = req.body
   try {

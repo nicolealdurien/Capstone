@@ -22,10 +22,9 @@ const CustLoginPage = ({history}) => {
 
         try {
             const { data } = await axios.post('/auth/customerLogin', { email, password }, config)
-            console.log(data)
             localStorage.setItem('customerToken', data.token)
             localStorage.setItem('customerEmail', email)
-
+            alert('Login successful! You will now be returned to the home page.')
             history.push('/')
         } catch (error) {
             setError(error.response.data.error)

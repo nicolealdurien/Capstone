@@ -45,7 +45,7 @@ exports.customerLogin = async (req, res, next) => {
     }
 }
 
-exports.customerForgotPassword = async(req, res, next) => {
+exports.customerForgotPassword = async (req, res, next) => {
 
     const { email } = req.body
 

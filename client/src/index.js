@@ -54,7 +54,7 @@ ReactDOM.render(
       <Router history = {history}>
         <BaseLayout>
           <Switch>
-            <Route exact path = "/product-manage" component = {ProductManage} />
+            <Route exact path = "/admin/product-manage" component = {ProductManage} />
             <Route exact path = "/update-product/:_id" component = {ProductUpdate} />
             <Route exact path = "/" component = {App} />
             <Route exact path = "/vegetables" component = {ProductCategoryVegetable} />

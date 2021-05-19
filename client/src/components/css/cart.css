@@ -529,7 +529,7 @@ td {
 
 .btn-update {
   padding: 10px 19px;
-  
+ 
 }
 
 .btn-update img {
@@ -5338,4 +5338,22 @@ span.close-icon {
 
 .table-responsive {
   margin-top: 50px;
+}
+
+.continue__shopping__btn {
+  background-color: #860286;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  width: 100%
+}
+
+.update__address__btn {
+  background-color: #860286;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  width: 100%
 }

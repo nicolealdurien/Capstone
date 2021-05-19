@@ -49,12 +49,12 @@ const StaffLoginPage = ({history}) => {
                 </div>
                 <div className = 'form-group'>
                     <label htmlFor = 'password'>Password:&nbsp;&nbsp;  
-                            <Link to = '/auth/forgotpassword' className = 'login-screen__forgotpassword'
+                            <Link to = '/auth/staff-forgot-password' className = 'login-screen__forgotpassword'
                                 tabIndex = {4}>Forgot Password?</Link></label>
                     <input type='password' required id='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} tabIndex = {2}/>
                 </div>
 
-                <button type = 'submit' className = 'btn btn-primary' tabIndex = {3}>Log In</button>
+                <button type = 'submit' className = 'regbutton' tabIndex = {3}>Login</button>
 
                 <span className='login-screen__subtext'>Don't have an account? Please ask your manager.</span>
             </form>

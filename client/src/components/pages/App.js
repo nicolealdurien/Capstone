@@ -52,7 +52,7 @@ const App = (props) => {
   for (let i = 0; i < all_products.length; i++) {
     if (all_products[i]) counter1++;
   }
-console.log(counter1)
+// console.log(counter1)
 
 // const Uniqueidzitem = localStorage.getItem('Uniqueid')
 const all_productsItems = all_products.map((items, index) => {
@@ -62,7 +62,7 @@ const all_productsItems = all_products.map((items, index) => {
               <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><div className='square'><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
             </div>
             <div>
-              <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
+              <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)} >{items.title}</h1></Link>
             </div>
           </div>
 })

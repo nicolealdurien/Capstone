@@ -51,9 +51,9 @@ const CustLoginPage = ({history}) => {
                         <input type='password' required id='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} tabIndex = {2}/>
                     </div>
 
-                    <button type = 'submit' className = 'btn btn-primary' tabIndex = {3}>Log In</button>
+                    <button type = 'submit' className = 'regbutton' tabIndex = {3}>Login</button>
 
-                    <span className='login-screen__subtext'>Don't have an account? <Link to='/auth/customer-register'>Register</Link></span>
+                    <span className='login-screen__subtext'>Don't have an account? <Link to='/auth/customer-register' className='cust__reg__prompt'>Register</Link></span>
                 </form>
                 <br/>
             </div>

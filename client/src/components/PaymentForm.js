@@ -9,18 +9,19 @@ const CARD_OPTIONS = {
     iconStyle: 'solid',
     style: {
         base: {
-            iconColor: '#c4f0ff',
+            iconColor: '#ffffff',
             color: '#fff',
             fontWeight: 500,
             fontFamily: 'Roboto, OpenSans, Segoe UI, sans-serif',
             fontSize: '16px',
             fontSmoothing: 'antialiased',
-            ':-webkit-autofill': { color: '#fce883'},
-            '::placeholder': { color: '#87bbfd' }
+            ':-webkit-autofill': { color: '#ffffff'},
+            '::placeholder': { color: '#ffffff' },
+            
         },
         invalid: {
-            iconColor: '#ffc7ee',
-            color: '#ff0000'
+            iconColor: '#ffffff',
+            color: '#ffffff',
         }
     }
 }
@@ -138,7 +139,7 @@ const PaymentForm = (props) => {
                 </div>
             </fieldset>
             
-            <button>Place Your Order: ${subtotal.toFixed(2)}</button>
+            <button className='stripe__submit'>Place Your Order: ${subtotal.toFixed(2)}</button>
         </form>
         :
         <div>

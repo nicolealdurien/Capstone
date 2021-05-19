@@ -201,11 +201,15 @@
     font-family: 'Amatic SC', cursive;
 }
 
+
 .stripeButton {
   background-color: rgb(134, 2, 134);
   padding: 4px 10px;
-  /* margin-right: 10px; */
+  margin-left: 10px;
   color: white;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .stripeButton:hover {
@@ -284,4 +288,5 @@
 .mask{
   padding-bottom: 27px;
 }
+
 

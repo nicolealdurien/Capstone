@@ -180,8 +180,8 @@ const Mycart = (props) => {
                             </table>
                         </div>
                         <div className="refresh-shoping">
-                            <a className="btn btn-update" href="shop-grid-sidebar.html">update cart</a>
-                            <Link to="/" className="btn btn-update"> continue shopping</Link>
+                            {/* <a className="btn btn-update" href="shop-grid-sidebar.html">update cart</a> */}
+                            <Link to="/" className="continue__shopping__btn"> CONTINUE SHOPPING</Link>
                         </div>
                     </div>
                     <div className="row">
@@ -219,9 +219,9 @@ const Mycart = (props) => {
                         </div>
                     </form>
                     <div className="refresh-shoping">
-                        <a className="btn btn-update" onClick = {() => handleUpdateAddress(address)} >
+                        <a className="update__address__btn" onClick = {() => handleUpdateAddress(address)} >
                             {/* <img src="refresh.png" alt="icon"/> */}
-                        Update Address</a>
+                        UPDATE ADDRESS</a>
                             
                     </div>
 
@@ -267,7 +267,7 @@ const Mycart = (props) => {
                             </div></div>
                         </div><br/><br/>
                         <div className = 'stripediv'>
-                            <h2 className = 'checkout'>Secure Checkout Handled Through&nbsp; <a href = 'https://stripe.com/' _target = 'blank'><img 
+                            <h2 className = 'checkout'>Secure Checkout Handled Through&nbsp;&nbsp; <a href = 'https://stripe.com/' _target = 'blank'><img 
                                 src='https://stripe.com/img/v3/home/social.png' 
                                 style = {{height: '60px'}} 
                                 alt = 'stripe logo'/>

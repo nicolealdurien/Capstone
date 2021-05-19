@@ -63,7 +63,7 @@ const fruitItems = fruit.map((items, index) => {
          
 
             <button className="more-details-button" onClick = {() => handleMoreDetails(items)}>
-                <Link to= {`/product-detail/${items.title}`} class="card-link" className="card-link-details"> More Details </Link>
+                <Link to= {`/product-detail/${items.title}`} class="card-link" className="card-link-details" style={{textDecoration: 'none'}}> More Details </Link>
             </button>
         </div>
         </div>

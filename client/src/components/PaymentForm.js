@@ -86,7 +86,7 @@ const PaymentForm = (props) => {
     .then(result => {
         if(result.success) {
             
-          alert("Your product has been added to the database")
+          alert("Your order has been submitted!")
          
           
         }

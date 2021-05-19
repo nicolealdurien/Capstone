@@ -70,7 +70,7 @@ const Mycart = (props) => {
 
     const handleUpdateAddress = () => {
         props.onUpdateAddress(address)
-        
+        alert('Delivery address added to your order!')
     }
 
     

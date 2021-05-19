@@ -4,6 +4,7 @@
 .register-screen {
     width: 100%;
     height: 100vh;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +38,8 @@
 
   .guestlogin {
     background-color: white;
-    padding: 30px
+    padding: 30px;
+    margin-bottom: 100px;
   }
 
   .guestloginlink {
@@ -50,9 +52,8 @@
   }
 
   .regbutton {
-    margin-right: 40px;
-      padding: 20px 20px;
-      padding-bottom: 40px;
+    margin-left:15px;
+    height: 50px;
       cursor: pointer;
       width: 90%;
       font-size: 2rem;

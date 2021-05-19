@@ -96,12 +96,12 @@ const ProductDetails = (props) => {
 
         return (
 
-    <div class="card mb-3 bg-success text-white" style={{width: '99vw', border: 'solid 5px black'}}>
+    <div class="card mb-3 bg-success text-white" style={{width: '97vw', border: 'solid 5px black'}}>
         <div class="row g-0"style={{height: '98%'}}>
-            <div className="product-details-image" class="col-md-4" style={{height: 'auto', width: '31%', margin: '5px'}}>
+            <div className="product-details-image" className="col-md-4" style={{height: 'auto', margin: '5px', marginRight: "10px"}}>
                 <img className="productimg" style={{width: '100%', height: '438px'}} class = 'card-img' src={product.imageurl} alt="..."/>
             </div>
-        <div class="col-md-8" style={{fontFamily: "sans-serif", width: '67%'}}>
+        <div class="col-md-8" style={{fontFamily: "sans-serif", width: '65%'}}>
             <div class="card-body">
                 <div>
                 <h1 class="card-title" style={{fontSize: '5rem'}}>{product.title}</h1><br/><h1 style={{fontSize: '3rem'}}>$ {product.rate}/{product.per}</h1>
@@ -123,12 +123,12 @@ const ProductDetails = (props) => {
                 {/* <div classname = 'detailsbuttondiv' style={{display:"flex"}}> */}
                 <p><b>QTY:</b>&nbsp; &nbsp;
                 <input type="number" min="1" max="100" value={qty} onChange = {(e) => setQty(e.target.value)}/></p>
-                <div classname = 'detailsbuttondiv' style={{display:"flex"}}>
-                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem', }} onClick = {() => handleAddToCart(product,qty)}>
+                <div classname = 'detailsbuttondiv'>
+                    <button className="btn" style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem', }} onClick = {() => handleAddToCart(product,qty)}>
                     <a style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span> Add To Cart</a></button>
-                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}}>
+                    <button className = 'btn' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}}>
                     <Link to = '/mycart' style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span> Go To Cart</Link></button>
-                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}} >
+                    <button className = 'btn' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}} >
                     <Link to = '/' style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span>Continue Shopping</Link></button>
                     </div>
             

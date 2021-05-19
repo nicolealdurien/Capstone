@@ -85,7 +85,7 @@ function Staff(props) {
     console.log(counter9)
 
     const completed_ordersItems = completed_orders.map((items, index) => {
-        return <div key ={index} className="card" style={{width: "18rem"}}>
+        return <div className='Column'><div key ={index} className="card" style={{width: "18rem"}}>
             <div>
             <h1>{items.fullname}</h1>
             </div>
@@ -109,12 +109,13 @@ function Staff(props) {
                      )})}</p>
             </div>
             <div>
-            <button onClick = {() => handleNotDeliveried({items})}><p> mark As Not delivered delivered</p></button>
+            <button onClick = {() => handleNotDeliveried({items})}><p> Mark As Not Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
             </div>
 
+            </div>
             </div>
     })
 
@@ -132,7 +133,8 @@ function Staff(props) {
     console.log(counter10)
 
     const pending_ordersItems = pending_orders.map((items, index) => {
-        return <div key ={index} className="card" style={{width: "18rem"}}>
+        return <div className='Column'><div key ={index} className="card" style={{width: "18rem"}}>
+            <div>
             <div>
             <h1>{items.fullname}</h1>
             </div>
@@ -156,12 +158,13 @@ function Staff(props) {
                      )})}</p>
             </div>
             <div>
-            <button onClick = {() => handleDeliveried({items})}><p> mark As delivered delivered</p></button>
+            <button onClick = {() => handleDeliveried({items})}><p> Mark As Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
             </div>
-
+            </div>
+            </div>
             </div>
     })
 
@@ -239,7 +242,7 @@ function Staff(props) {
 
 
     return<div>
-       <div>
+       <div className='center'>
            <div><h2>Pending Order</h2></div>
            <div>{pending_ordersItems}</div>
        </div>

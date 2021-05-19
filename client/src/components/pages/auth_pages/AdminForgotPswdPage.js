@@ -42,7 +42,7 @@ const AdminForgotPswdPage = () => {
           <input type="email" required id="email" placeholder="Email address" value={email}
             onChange={(e) => setEmail(e.target.value)}/>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="forgotbutton">
           Send Email
         </button>
       </form>

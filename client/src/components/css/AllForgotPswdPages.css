@@ -25,3 +25,22 @@
     display: block;
     margin: 0.5rem 0;
   }
+
+  .forgotbutton {
+    margin-left:15px;
+    height: 50px;
+      cursor: pointer;
+      width: 90%;
+      font-size: 2rem;
+      border: #fff;
+      background-color: rgb(134, 2, 134);
+      color: white;
+      font-family: 'Oswald', sans-serif; 
+      font-style: italic;
+    }
+    
+  .forgotbutton:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: coral
+  }

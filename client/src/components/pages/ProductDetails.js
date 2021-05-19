@@ -97,15 +97,15 @@ const ProductDetails = (props) => {
         return (
 
     <div class="card mb-3 bg-success text-white" style={{width: '99vw', border: 'solid 5px black'}}>
-        <div class="row g-0"style={{height: '100%'}}>
-            <div className="product-details-image" class="col-md-4" style={{height: 'auto', width: '31%', margin: '0px'}}>
+        <div class="row g-0"style={{height: '98%'}}>
+            <div className="product-details-image" class="col-md-4" style={{height: 'auto', width: '31%', margin: '5px'}}>
                 <img className="productimg" style={{width: '100%', height: '438px'}} class = 'card-img' src={product.imageurl} alt="..."/>
             </div>
         <div class="col-md-8" style={{fontFamily: "sans-serif", width: '67%'}}>
             <div class="card-body">
                 <div>
-                <h1 class="card-title" style={{fontSize: '80px'}}>{product.title} <span style={{fontSize: '60px', float:'right'}}>$ {product.rate}/{product.per}</span> </h1> 
-                </div>
+                <h1 class="card-title" style={{fontSize: '5rem'}}>{product.title}</h1><br/><h1 style={{fontSize: '3rem'}}>$ {product.rate}/{product.per}</h1>
+                </div><br/>
                 <p class="card-text" style={{fontSize: '20px'}}>{product.description}</p>
 
                 <ul>
@@ -116,23 +116,20 @@ const ProductDetails = (props) => {
                 <li>
                     <p class="card-text" style={{fontSize: '20px'}}><b>Sub-Category: </b><i>{product.subcategory}</i></p>
                 </li>
-                <li>
+                {/* <li>
                     <p class="card-text" style={{fontSize: '20px'}}> <b>Product ID: </b><i>{product._id}</i></p>
-
-                    
-                
-                </li>
+                </li> */}
                 </ul>
-                <div classname = 'detailsbuttondiv' style={{display:"flex"}}>
+                {/* <div classname = 'detailsbuttondiv' style={{display:"flex"}}> */}
                 <p><b>QTY:</b>&nbsp; &nbsp;
                 <input type="number" min="1" max="100" value={qty} onChange = {(e) => setQty(e.target.value)}/></p>
-                
-                    <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '25px', marginLeft: '25px'}} onClick = {() => handleAddToCart(product,qty)}>
-                    <a style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span> Add To Cart</a></button>
-                    <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '15px', marginLeft: '15px'}}>
-                    <Link to = '/mycart' style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span> Go To Cart</Link></button>
-                    <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '15px', marginLeft: '15px'}} >
-                    <Link to = '/' style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span>Continue Shopping</Link></button>
+                <div classname = 'detailsbuttondiv' style={{display:"flex"}}>
+                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem', }} onClick = {() => handleAddToCart(product,qty)}>
+                    <a style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span> Add To Cart</a></button>
+                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}}>
+                    <Link to = '/mycart' style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span> Go To Cart</Link></button>
+                    <button className = 'proddetailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'210px', marginRight: '.2rem', marginLeft: '.2rem'}} >
+                    <Link to = '/' style = {{fontSize: '1.2rem', textDecoration: 'none', color: 'white'}}className="add-cart" ><span><span className="icon_plus"></span></span>Continue Shopping</Link></button>
                     </div>
             
             </div>

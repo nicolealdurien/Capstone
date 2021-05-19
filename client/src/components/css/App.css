@@ -220,9 +220,17 @@
 .detailsbuttondiv {
   flex-wrap: wrap;
   max-width: 800px;
+  justify-content: space-between;
 }
 
 .detailsbutton {
+  display: flex;
+  flex-direction: wrap;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.proddetailsbutton {
   display: flex;
   flex-direction: wrap;
   /* min-width: 160px; */

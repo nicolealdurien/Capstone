@@ -87,10 +87,7 @@ const vegetableItems = vegetable.map((items, index) => {
         <div>
         <Link style={{textDecoration: 'none', color: '#3a2713'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
         </div>
-       
-        
-
-        </div>
+      </div>
 })
 
 
@@ -111,11 +108,7 @@ const fruitItems = fruit.map((items, index) => {
         <div>
         <Link style={{textDecoration: 'none', color: '#3a2713'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
         </div>
-        
-        
-        
-
-        </div>
+      </div>
 })
 
 

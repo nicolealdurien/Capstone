@@ -488,6 +488,7 @@ td {
   border: 1px solid #a8a8a8;
   display: inline-block;
   font-size: 20px;
+  width: auto;
   text-transform: uppercase;
   font-weight: lighter;
   border-radius: 0px;

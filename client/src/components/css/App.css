@@ -264,7 +264,7 @@
   border-spacing: 10px; /*Optional*/
 }
 .Column {
-  display: inline-flex;;
+  display: inline-flex;
    /*Optional*/
 }
 
@@ -279,5 +279,8 @@
 
 .nav-litem {
   text-decoration: none;
+  
+.mask{
+  padding-bottom: 27px;
 }
 

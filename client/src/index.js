@@ -37,6 +37,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Popper from 'popper.js';
+import ReactBreakpoints from 'react-breakpoints'
+
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -47,9 +49,19 @@ const store = createStore(reducer, composeEnhancers(
 
 const history = createBrowserHistory()
 
+const breakpoints = {
+  mobile: 320,
+  mobileLandscape: 480,
+  tablet: 768,
+  tabletLandscape: 1024,
+  desktop: 1200,
+  desktopLarge: 1500,
+  desktopWide: 1920,
+}
 
 ReactDOM.render(
   <React.StrictMode>
+    <ReactBreakpoints breakpoints={breakpoints}>
     <Provider store = {store}>
       <Router history = {history}>
         <BaseLayout>
@@ -80,6 +92,7 @@ ReactDOM.render(
         </BaseLayout>
       </Router>
     </Provider>
+    </ReactBreakpoints>
   </React.StrictMode>,
   document.getElementById('root')
 );

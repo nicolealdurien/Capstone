@@ -59,44 +59,44 @@
 
 
 .card:hover {
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
-#card-fruits{
-  background-color: #396790;
+#card-fruits {
+  background-color: #523ce0;
 }
 
-#card-vegetables{
-  background-color: #547341;
+#card-vegetables {
+  background-color: #7ca762;
 }
 
-#card-flowers{
-  background-color: #6b2020
+#card-flowers {
+  background-color: #ff6047;
 }
 
 
-#card-fruits:hover{
-  border: 1px solid black
+#card-fruits:hover {
+  border: 1px solid #140e35
 }
 
 #card-vegetables:hover{
-  border: 1px solid black
+  border: 1px solid #1d2717;
 }
 
 #card-flowers:hover{
-  border: 1px solid black
+  border: 1px solid #552018
 }
 
 #card-fruit:hover{
-  border: 2px solid black
+  border: 2px solid #140e35
 }
 
 #card-vegetable:hover{
-  border: 2px solid black
+  border: 2px solid #1d2717
 }
 
 #card-flower:hover{
-  border: 2px solid black
+  border: 2px solid #552018
 }
 
 
@@ -268,3 +268,8 @@
 .deliverbtn {
   width: 200px;
 }
+
+.nav-litem {
+  text-decoration: none;
+}
+

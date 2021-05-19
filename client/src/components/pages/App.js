@@ -58,18 +58,13 @@ console.log(counter1)
 const all_productsItems = all_products.map((items, index) => {
   // console.log(Uniqueid)
     return <div key ={index} className="card" style={{width: "18rem"}}>
-        <div>
-        <Link to= {`/product-detail/${items.title}`}><div className='square'><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
-        </div>
-        <div>
-        <Link to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
-        </div>
-        
-        
-        
-        
-
-        </div>
+            <div>
+              <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><div className='square'><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
+            </div>
+            <div>
+              <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
+            </div>
+          </div>
 })
 
 
@@ -87,10 +82,10 @@ console.log(counter2)
 const vegetableItems = vegetable.map((items, index) => {
     return <div key ={index} className="card" id='card-vegetable' style={{width: "18rem"}}>
         <div>
-        <Link to= {`/product-detail/${items.title}`}><div className="square"><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title} /></div></Link>
+        <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><div className="square"><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title} /></div></Link>
         </div>
         <div>
-        <Link to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
+        <Link style={{textDecoration: 'none', color: '#3a2713'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
         </div>
        
         
@@ -111,10 +106,10 @@ console.log(counter3)
 const fruitItems = fruit.map((items, index) => {
     return <div key ={index} className="card" id='card-fruit' style={{width: "18rem"}}>
         <div>
-        <Link to= {`/product-detail/${items.title}`}><div className='square'><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
+        <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><div className='square'><img className="img" onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
         </div>
         <div>
-        <Link to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
+        <Link style={{textDecoration: 'none', color: '#3a2713'}} to= {`/product-detail/${items.title}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
         </div>
         
         
@@ -135,10 +130,10 @@ for (let i = 0; i < all_products.length; i++) {
 const flowerItems = flower.map((items, index) => {
     return <div key ={index} className="card" id='card-flower' style={{width: "18rem"}}>
         <div>
-        <Link to= {`/product-detail/${items.title}`}><div className='square'><img className="img" style={{width: "17rem"}} onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
+        <Link style={{textDecoration: 'none'}} to= {`/product-detail/${items.title}`}><div className='square'><img className="img" style={{width: "17rem"}} onClick = {() => handleMoreDetails(items)} src={items.imageurl} alt={items.title}/></div></Link>
         </div>
         <div>
-        <Link to= {`/product-detail/${items.title}}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
+        <Link style={{textDecoration: 'none', color: '#3a2713'}} to= {`/product-detail/${items.title}}`}><h1 onClick = {() => handleMoreDetails(items)}>{items.title}</h1></Link>
         </div>
        
         
@@ -161,7 +156,7 @@ const flowerItems = flower.map((items, index) => {
             <div className='text-white'>
               <h1 className='mb-3'>FruVe Flow</h1>
               <h4 className='mb-4'>Get your Fruit, Vegetables, and Flowers delivered fresh.</h4>
-              <Link className='btn btn-outline-light btn-lg' to='/auth/customer-register' role='button'>
+              <Link style={{textDecoration: 'none'}} className='btn btn-outline-light btn-lg' to='/auth/customer-register' role='button'>
                 Register Today!
               </Link>
             </div>

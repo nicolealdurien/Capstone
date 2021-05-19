@@ -186,13 +186,13 @@ function ProductManage(props) {
                 <h4>{items.description}</h4>
             </div>
             <div>
-                <h6>rate : {items.rate} / {items.per}</h6>
+                <h6>Rate : {items.rate} / {items.per}</h6>
             </div>
             <div>
-                <p>category : {items.category}</p>
+                <p>Category : {items.category}</p>
             </div>
             <div>
-            <p>sub-category : {items.subcategory}</p>
+            <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
             <button onClick= {() => handledelete(items._id)}>Delete</button>
@@ -225,13 +225,13 @@ function ProductManage(props) {
                 <h4>{items.description}</h4>
             </div>
             <div>
-                <h6>rate : {items.rate} / {items.per}</h6>
+                <h6>Rate : {items.rate} / {items.per}</h6>
             </div>
             <div>
-                <p>category : {items.category}</p>
+                <p>Category : {items.category}</p>
             </div>
             <div>
-            <p>sub-category : {items.subcategory}</p>
+            <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
             <button onClick= {() => handledelete(items._id)}>Delete</button>

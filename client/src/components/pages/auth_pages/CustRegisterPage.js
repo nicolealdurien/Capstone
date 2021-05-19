@@ -81,7 +81,9 @@ const CustRegisterPage = ({history}) => {
                 <div className = 'form-group'>
                     <input type='text' required id='zip' placeholder='Zip' value={zip} onChange={(e) => setZip(e.target.value)}/>
                 </div>
+               
                 <button type = 'submit' className = 'regbutton'>Register</button>
+               
                 <br/>
                 <span className='register-screen__subtext'>Already have an account? <Link to='/auth/customer-login' className="guestloginlink">Log In</Link></span>
             </form><br/>

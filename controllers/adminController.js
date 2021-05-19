@@ -62,7 +62,7 @@ exports.deleteProduct = (req, res, next) => {
 
 
 
-//route to get all admin :(not staff or users)
+//route to get all admins: (not staff or users)
 exports.allAdmins = (req, res, next) => {
   
   Admin.find({}, (error, posts) => {
@@ -198,3 +198,4 @@ exports.deleteOrder = (req, res, next) => {
     }
   })
 }
+

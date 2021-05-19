@@ -26,7 +26,7 @@ const AdminLoginPage = ({history}) => {
 
             localStorage.setItem('adminToken', data.token)
 
-            history.push('/product-manage')
+            history.push('/admin/product-manage')
         } catch (error) {
             setError(error.response.data.error)
             setTimeout(() => {

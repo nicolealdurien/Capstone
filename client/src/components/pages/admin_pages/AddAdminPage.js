@@ -45,7 +45,7 @@ const AddAdminPage = ({history}) => {
     return (
         <div className = 'register-screen'>
             <form onSubmit={registerHandler} className = 'register-screen__form'>
-                <h3 className = 'register-screen__title'>Register</h3>
+                <h3 className = 'register-screen__title'>Register A New Admin</h3>
                 {error && <span className='error-message'>{error}</span>}
                 <div className = 'form-group'>
                     <input type='text' required id='name' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
@@ -60,8 +60,8 @@ const AddAdminPage = ({history}) => {
                     <input type='password' required id='confirmpassword' placeholder='Confirm password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                 </div>
 
-                <button type = 'submit' className = 'btn btn-primary'>Register New Admin</button>
-                <Link to = '/product-manage'>Return to admin profile page</Link>
+                <button type = 'submit' className = 'btn btn-primary'>Register</button>&nbsp;&nbsp;
+                <Link to = '/admin/product-manage'>Return to admin profile page</Link>
             </form>
         </div>
     )

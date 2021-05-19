@@ -256,10 +256,15 @@
   border-spacing: 10px; /*Optional*/
 }
 .Column {
-  display: table-cell;
+  display: inline-flex;;
    /*Optional*/
 }
 
 .center {
-  align-items: center;
+  text-align: -webkit-center;
+  caption-side: top;
+}
+
+.deliverbtn {
+  width: 200px;
 }

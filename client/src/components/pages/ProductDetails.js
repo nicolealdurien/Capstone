@@ -130,9 +130,9 @@ const ProductDetails = (props) => {
                     <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '25px', marginLeft: '25px'}} onClick = {() => handleAddToCart(product,qty)}>
                     <a style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span> Add To Cart</a></button>
                     <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '15px', marginLeft: '15px'}}>
-                    <a style = {{fontSize: '20px'}}className="add-cart" ><Link to = '/mycart'><span><span className="icon_plus"></span></span> Go To Cart</Link></a></button>
+                    <Link to = '/mycart' style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span> Go To Cart</Link></button>
                     <button className = 'detailsbutton' style = {{backgroundColor: '#860286', padding: '8px', color: 'white', marginTop:'28px', width:'400px', marginRight: '15px', marginLeft: '15px'}} >
-                    <a href = '/' style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span>Continue Shopping</a></button>
+                    <Link to = '/' style = {{fontSize: '20px'}}className="add-cart" ><span><span className="icon_plus"></span></span>Continue Shopping</Link></button>
                     </div>
             
             </div>

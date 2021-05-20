@@ -23,6 +23,10 @@ MERN stack (MongoDB, Express, React, Node), Redux, SendGrid SMTP relay, Javascri
 * **Developers:**<br/>
 Neil Shah, Younus Qureishy, Wesley Kolar, and Nicole Aldurien. Thanks also to Malav Shah for his assistance with database entry!
 
+* **Screenshot of Cart:**<br/>
+![](https://github.com/nicolealdurien/Capstone/blob/main/client/public/cart.png?raw=true)
+<br/><br/>
+
 * **Screenshot of Password Reset Email:**<br/>
 ![](https://github.com/nicolealdurien/Capstone/blob/main/client/public/reset.png?raw=true)
 <br/><br/>

@@ -56,14 +56,6 @@ const ProductDetails = (props) => {
     //     })
     // }
 
-
-    // const handleAddToCart = () => {
-    //     dispatch(onAddToCart(product, qty))
-    //     alert("This item has been added to your cart!")
-    // }
-
-
-
     const handleChange = (e) => {   
         setQty({
             ...qty,
@@ -72,17 +64,12 @@ const ProductDetails = (props) => {
         })
     }
 
-    // console.log(qty)
-    // console.log(product)
 
     const handleAddToCart = (product, qty) => {
         
         const subtotal = parseFloat(qty * product.rate)
-        // console.log(subtotal)
         const transformProduct  = {...product, qty , subtotal}
 
-
-        console.log(transformProduct)
         props.onAddToCart(transformProduct)
         alert("Item has been added to the cart!")
     }
@@ -92,14 +79,13 @@ const ProductDetails = (props) => {
     const customerToken = localStorage.getItem('customerToken')
    
         var product = props.moredetails
-        // console.log(product)
 
         return (
 
     <div class="card mb-3 bg-success text-white" style={{width: '97vw', border: 'solid 5px black'}}>
         <div class="row g-0"style={{height: '98%'}}>
             <div className="product-details-image" className="col-md-4" style={{height: 'auto', margin: '5px', marginRight: "10px"}}>
-                <img className="productimg" style={{width: '100%', height: '438px'}} class = 'card-img' src={product.imageurl} alt="..."/>
+                <img className="productimg" style={{width: '100%', height: '100%'}} class = 'card-img' src={product.imageurl} alt="..."/>
             </div>
         <div class="col-md-8" style={{fontFamily: "sans-serif", width: '65%'}}>
             <div class="card-body">
@@ -116,11 +102,8 @@ const ProductDetails = (props) => {
                 <li>
                     <p class="card-text" style={{fontSize: '20px'}}><b>Sub-Category: </b><i>{product.subcategory}</i></p>
                 </li>
-                {/* <li>
-                    <p class="card-text" style={{fontSize: '20px'}}> <b>Product ID: </b><i>{product._id}</i></p>
-                </li> */}
                 </ul>
-                {/* <div classname = 'detailsbuttondiv' style={{display:"flex"}}> */}
+
                 <p><b>QTY:</b>&nbsp; &nbsp;
                 <input type="number" min="1" max="100" value={qty} onChange = {(e) => setQty(e.target.value)}/></p>
                 <div classname = 'detailsbuttondiv'>

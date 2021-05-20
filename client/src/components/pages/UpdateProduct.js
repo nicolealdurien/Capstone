@@ -19,7 +19,7 @@ function ProductUpdate(props) {
         const token = localStorage.getItem('adminToken')
         const id = props.match.params
         console.log(id)
-        fetch (`http://localhost:5000/admin/update-product/${id._id}`,{
+        fetch (`/admin/update-product/${id._id}`,{
             method: 'PUT',
             headers: {
                 'authorization':`Bearer ${token}`,

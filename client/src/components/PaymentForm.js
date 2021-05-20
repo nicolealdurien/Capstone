@@ -60,7 +60,7 @@ const PaymentForm = (props) => {
         const is_delivered = false
         console.log(address)
     
-        fetch ('http://localhost:5000/order-confirmation',{
+        fetch ('/order-confirmation',{
         method: 'POST',
         
         headers: {
@@ -109,7 +109,7 @@ const PaymentForm = (props) => {
         if(!error) {
             try {
                 const { id } = paymentMethod
-                const response = await axios.post('http://localhost:5000/nonmodalpayment', {
+                const response = await axios.post('/nonmodalpayment', {
                     amount: amount,
                     id 
                 })

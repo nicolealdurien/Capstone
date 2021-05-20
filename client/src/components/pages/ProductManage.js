@@ -493,7 +493,7 @@ function ProductManage(props) {
         const token = localStorage.getItem('adminToken')
 
 
-        fetch (`http://localhost:5000/change_to_delivered/${_id}`,{
+        fetch (`/change_to_delivered/${_id}`,{
         method: 'PATCH',
         headers: {
             'authorization':`Bearer ${token}`,
@@ -524,7 +524,7 @@ function ProductManage(props) {
 
 
 
-        fetch (`http://localhost:5000/change_to_not_delivered/${_id}`,{
+        fetch (`/change_to_not_delivered/${_id}`,{
         method: 'PATCH',
         headers: {
             'authorization':`Bearer ${token}`,
@@ -560,7 +560,7 @@ function ProductManage(props) {
         const token = localStorage.getItem('adminToken')
 
 
-        fetch (`http://localhost:5000/admin/delete-order/${_id}`,{
+        fetch (`/admin/delete-order/${_id}`,{
         method: 'DELETE',
         headers: {
             'authorization':`Bearer ${token}`,
@@ -591,7 +591,7 @@ function ProductManage(props) {
   const handleSave = () => {
     const token = localStorage.getItem('adminToken')
 
-    fetch ('http://localhost:5000/admin/add-products',{
+    fetch ('/admin/add-products',{
         method: 'POST',
 
         headers: {

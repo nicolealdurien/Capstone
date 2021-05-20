@@ -151,15 +151,17 @@ padding: 0 16px 16px
 }
 
 .more-details-button {
-    background-color: #2f729e;
+    background-color: #523ce0;
     padding: 4px 10px;
     margin-left: 15px;
     font-size: 15px;
     color: white;
+    text-decoration: none;
 }
 
 .more-details-button a {
   color: white;
+  text-decoration: none;
 }
 
 .more-details-button:hover {

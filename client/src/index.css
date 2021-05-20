@@ -43,13 +43,13 @@ h1 {
 }
 
 .btn {
-  padding: 10px 20px;
+  /* padding: 10px 20px;
   cursor: pointer;
-  width: 100%;
-  font-size: 3rem;
+  width: 100%; */
+  /* font-size: 3rem; */
   border: #fff;
-  background-color: rgb(134, 2, 134);
-  color: white;
+  /* background-color: rgb(134, 2, 134); */
+  /* color: white; */
   font-family: 'Oswald', sans-serif;
   font-style: italic;
 }
@@ -61,7 +61,7 @@ h1 {
 }
 
 .btn-primary {
-  background-color: rgb(134, 2, 134);
+  /* background-color: rgb(165, 165, 165); */
   color: #fff;
   width: 40%;
   

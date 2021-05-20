@@ -177,7 +177,7 @@ function Staff(props) {
         const token = localStorage.getItem('adminToken')
 
 
-        fetch (`http://localhost:5000/change_to_delivered/${_id}`,{
+        fetch (`change_to_delivered/${_id}`,{
         method: 'PATCH',
         headers: {
             'authorization':`Bearer ${token}`,
@@ -207,7 +207,7 @@ function Staff(props) {
 
 
 
-        fetch (`http://localhost:5000/change_to_not_delivered/${_id}`,{
+        fetch (`/change_to_not_delivered/${_id}`,{
         method: 'PATCH',
         headers: {
             'authorization':`Bearer ${token}`,

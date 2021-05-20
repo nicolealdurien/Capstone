@@ -474,8 +474,8 @@ function ProductManage(props) {
                      <p><h1>{cartItems.title} - {cartItems.qty}</h1></p>
                      )})}</p>
             </div>
-            <div>
-            <button onClick = {() => handleDeliveried({items})}><p> mark As delivered delivered</p></button>
+            <div>d
+            <button onClick = {() => handleDeliveried({items})}><p> Mark As Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
@@ -553,10 +553,10 @@ function ProductManage(props) {
 
 
     const handleDeleteOrder = (items) => {
-        console.log("deleteOrder is fired")
-        console.log(items.items._id)
+        // console.log("deleteOrder is fired")
+        // console.log(items.items._id)
        const _id = items.items._id
-        console.log(_id)
+        // console.log(_id)
         const token = localStorage.getItem('adminToken')
 
 

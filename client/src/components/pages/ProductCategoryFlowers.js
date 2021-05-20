@@ -9,7 +9,7 @@ import '../css/App.css';
 const ProductCategoryFlower = (props) =>{
 
     useEffect(() => {
-        console.log("use effect is fired")
+        // console.log("use effect is fired")
         props.onLoadProducts()
     },[])
 

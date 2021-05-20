@@ -53,7 +53,7 @@ export const loadAllUsers = () => {
 
 
         // api call to fetch all admins 
-        fetch('http://localhost:5000/admin/all-admins', {
+        fetch('/admin/all-admins', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -68,7 +68,7 @@ export const loadAllUsers = () => {
         })
 
         // api call to fetch all staff 
-        fetch('http://localhost:5000/admin/all-staff', {
+        fetch('/admin/all-staff', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -83,7 +83,7 @@ export const loadAllUsers = () => {
         })
 
         // api call to fetch all users 
-        fetch('http://localhost:5000/admin/all-users', {
+        fetch('/admin/all-users', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -107,7 +107,7 @@ export const LoadOrders = () => {
         const token = localStorage.getItem('adminToken')
 
         // api call to fetch all orders 
-        fetch('http://localhost:5000/all-orders', {
+        fetch('/all-orders', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -122,7 +122,7 @@ export const LoadOrders = () => {
         })
 
         // api call to fetch all completed-orders 
-        fetch('http://localhost:5000/completed-orders', {
+        fetch('/completed-orders', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -137,7 +137,7 @@ export const LoadOrders = () => {
         })
 
         // api call to fetch all pending-orders 
-        fetch('http://localhost:5000/pending-orders', {
+        fetch('/pending-orders', {
             method: 'GET',
             headers: {
                 'authorization':`Bearer ${token}`,
@@ -161,7 +161,7 @@ export const deleteProduct = (_id, props) => {
     return(dispatch) => {
         const token = localStorage.getItem('adminToken')
         console.log(token)
-        fetch(`http://localhost:5000/admin/delete-product/${_id}`, {
+        fetch(`/admin/delete-product/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization':`Bearer ${token}`,

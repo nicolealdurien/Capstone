@@ -1,7 +1,7 @@
 # FruVe Flow
 
 * **Live Link:**
-(coming soon)
+https://fruveflow.herokuapp.com
 
 * **Purpose of the app:** <br/>
     FruVe Flow is a proof-of-concept/MVP e-commerce site for the nascent grocery delivery business of the family of one of our dev team members.

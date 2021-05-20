@@ -3,6 +3,9 @@
 * **Live Link:**
 https://fruveflow.herokuapp.com
 
+![](https://github.com/nicolealdurien/Capstone/blob/main/client/public/homepage.png?raw=true)
+<br/><br/><br/>
+
 * **Purpose of the app:** <br/>
     FruVe Flow is a proof-of-concept/MVP e-commerce site for the nascent grocery delivery business of the family of one of our dev team members.
 

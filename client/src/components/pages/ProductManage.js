@@ -101,19 +101,19 @@ function ProductManage(props) {
                 <h4>{items.description}</h4>
             </div>
             <div>
-                <h6>rate : {items.rate} / {items.per}</h6>
+                <h6>Rate : {items.rate} / {items.per}</h6>
             </div>
             <div>
-                <p>category : {items.category}</p>
+                <p>Category : {items.category}</p>
             </div>
             <div>
-            <p>sub-category : {items.subcategory}</p>
+            <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
-            <button onClick= {() => handledelete(items._id)}>Delete</button>
+            <button onClick= {() => handledelete(items._id)} className='adminbtn'>Delete</button>
             </div>
             <div>
-            <button><NavLink to= {`/update-product/${items._id}`}>update</NavLink></button>
+            <button className='adminbtn'><NavLink to= {`/update-product/${items._id}`}>Update</NavLink></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
@@ -146,19 +146,19 @@ function ProductManage(props) {
                 <h4>{items.description}</h4>
             </div>
             <div>
-                <h6>rate : {items.rate} / {items.per}</h6>
+                <h6>Rate : {items.rate} / {items.per}</h6>
             </div>
             <div>
-                <p>category : {items.category}</p>
+                <p>Category : {items.category}</p>
             </div>
             <div>
-            <p>sub-category : {items.subcategory}</p>
+            <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
-            <button onClick= {() => handledelete(items._id)}>Delete</button>
+            <button onClick= {() => handledelete(items._id)} className='adminbtn'>Delete</button>
             </div>
             <div>
-            <button><NavLink to= {`/update-product/${items._id}`}>update</NavLink></button>
+            <button className='adminbtn'><NavLink to= {`/update-product/${items._id}`}>Update</NavLink></button>
             </div>
 
             </div>
@@ -195,10 +195,10 @@ function ProductManage(props) {
             <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
-            <button onClick= {() => handledelete(items._id)}>Delete</button>
+            <button onClick= {() => handledelete(items._id)} className='adminbtn'>Delete</button>
             </div>
             <div>
-            <button><NavLink to= {`/update-product/${items._id}`}>update</NavLink></button>
+            <button className='adminbtn'><NavLink to= {`/update-product/${items._id}`}  >Update</NavLink></button>
             </div>
 
             </div>
@@ -234,10 +234,10 @@ function ProductManage(props) {
             <p>Sub-category : {items.subcategory}</p>
             </div>
             <div>
-            <button onClick= {() => handledelete(items._id)}>Delete</button>
+            <button onClick= {() => handledelete(items._id)} className='adminbtn'>Delete</button>
             </div>
             <div>
-            <button><NavLink to= {`/update-product/${items._id}`}>update</NavLink></button>
+            <button className='adminbtn'><NavLink to= {`/update-product/${items._id}`} >Update</NavLink></button>
             </div>
 
             </div>
@@ -428,7 +428,7 @@ function ProductManage(props) {
                      )})}</p>
             </div>
             <div>
-            <button onClick = {() => handleNotDeliveried({items})}><p> mark As Not delivered delivered</p></button>
+            <button onClick = {() => handleNotDeliveried({items})}><p> Mark As Not Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
@@ -475,7 +475,7 @@ function ProductManage(props) {
                      )})}</p>
             </div>
             <div>
-            <button onClick = {() => handleDeliveried({items})}><p> mark As delivered delivered</p></button>
+            <button onClick = {() => handleDeliveried({items})}><p> Mark As Delivered</p></button>
             </div>
             <div>
             <p>Id : {items._id}</p>
@@ -638,7 +638,7 @@ function ProductManage(props) {
             <div id="box-admin">
             <>
                 <div id="header">
-                    <h2>Add, Edit, Or Delete Products</h2>
+                    <h2>Add / Edit / Delete Products</h2>
 
                 </div>
                 <MDBBtn onClick={toggleFirstElement} className="collapse_btn_title mt-3"> All Products (total products: {counter1}) </MDBBtn>

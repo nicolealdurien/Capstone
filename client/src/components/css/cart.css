@@ -492,7 +492,7 @@ td {
   text-transform: uppercase;
   /* font-weight: lighter; */
   /* border-radius: 0px; */
-  padding-inline: revert;
+  /* padding-inline: revert; */
   /* padding-bottom: 10px; */
 }
 

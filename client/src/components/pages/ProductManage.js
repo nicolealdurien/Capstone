@@ -612,7 +612,7 @@ function ProductManage(props) {
     .then(result => {
         if(result.success) {
 
-          alert("Your product has been added to the database")
+          alert("Your product has been added to the database!")
           props.onLoadProducts()
             props.onLoadUsers()
             props.onLoadOrders()

@@ -32,8 +32,8 @@ const AddAdminPage = ({history}) => {
 
         try {
             await axios.post('/auth/add-admin', {username, email, password}, config)
-            alert("Your new administrator has been added to the database")
-            history.push('/product-manage')
+            alert("Your new administrator has been added to the database!")
+            history.push('/admin/product-manage')
         } catch (error) {
             setError(error.response.data.error)
             setTimeout(() => {

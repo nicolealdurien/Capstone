@@ -32,8 +32,8 @@ const AddStaffPage = ({history}) => {
 
         try {
             await axios.post('/auth/add-staff', {username, email, password}, config)
-            alert("Your new staff member has been added to the database")
-            history.push('/product-manage')
+            alert("Your new staff member has been added to the database!")
+            history.push('/admin/product-manage')
         } catch (error) {
             setError(error.response.data.error)
             setTimeout(() => {

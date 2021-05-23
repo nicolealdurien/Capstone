@@ -12,17 +12,16 @@ function ProductUpdate(props) {
             
         })
     }
-    // var  all_products = props.all_products 
-    // console.log(all_products)
-    const handleupdate =() => {
+    
+
+    const handleupdate = () => {
 
         const token = localStorage.getItem('adminToken')
         const id = props.match.params
-        console.log(id)
         fetch (`/admin/update-product/${id._id}`,{
             method: 'PUT',
             headers: {
-                'authorization':`Bearer ${token}`,
+                'authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({
@@ -37,10 +36,8 @@ function ProductUpdate(props) {
          }).then(response => response.json())
          .then(result => {
             if(result.success) {
-                console.log("Product updated")
-                
-                alert("Your product has been added to the database")
-                props.history.push('/product-manage')
+                alert("Your product has been added to the database!")
+                props.history.push('/admin/product-manage')
             }
         })
     }

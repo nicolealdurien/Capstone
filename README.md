@@ -21,7 +21,7 @@ https://fruveflow.herokuapp.com
 MERN stack (MongoDB, Express, React, Node), Redux, SendGrid SMTP relay, Javascript, HTML/CSS
 
 * **Developers:**<br/>
-Neil Shah, Younus Qureishy, Wesley Kolar, and Nicole Aldurien. Thanks also to Malav Shah for his assistance with database entry!
+[Neil Shah](https://github.com/neilshah101), [Younus Qureishy](https://github.com/yqureishy), [Wesley Kolar](https://github.com/wesleyjkolar), and [Nicole Aldurien](https://github.com/nicolealdurien). Thanks also to Malav Shah for his assistance with database entry!
 
 * **Screenshot of Cart:**<br/>
 ![](https://github.com/nicolealdurien/Capstone/blob/main/client/public/cart.png?raw=true)

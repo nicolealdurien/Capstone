@@ -30,7 +30,7 @@ app.use(errorHandler)
 
 
 
-// route to get all products 
+// Route to get all products 
 app.get('/all-products', (req, res) => {
   Product.find({}, (error, product) => {
     if(error) {
@@ -43,7 +43,7 @@ app.get('/all-products', (req, res) => {
 
 
 
-//route to get product by all vegetable
+// Route to get vegetable products only
 app.get('/all-products/vegetable', (req, res) => {
   
   Product.find({
@@ -59,7 +59,7 @@ app.get('/all-products/vegetable', (req, res) => {
 
 
 
-//route to get product by all fruit
+// Route to get fruit products only
 app.get('/all-products/fruit', (req, res) => {
   
   Product.find({
@@ -74,7 +74,7 @@ app.get('/all-products/fruit', (req, res) => {
 })
 
 
-//route to get product by all flowers
+// Route to get flower products only
 app.get('/all-products/flower', (req, res) => {
   
   Product.find({
@@ -93,7 +93,7 @@ app.get('/all-products/flower', (req, res) => {
 //////////////////////////////////////////////
 
 
-//routes to get all order history
+// Route to get all orders
 app.get('/all-orders', (req, res) => {
   
   Cart.find({}, (error, posts) => {
@@ -106,7 +106,7 @@ app.get('/all-orders', (req, res) => {
 })
 
 
-//routes to get all completed-orders history
+// Route to get just completed orders
 app.get('/completed-orders', (req, res) => {
   
   Cart.find({
@@ -121,7 +121,7 @@ app.get('/completed-orders', (req, res) => {
 })
 
 
-//routes to get all pending-orders history
+// Routes to get just pending orders
 app.get('/pending-orders', (req, res) => {
   
   Cart.find({
@@ -135,13 +135,11 @@ app.get('/pending-orders', (req, res) => {
   })
 })
 
-//routes to change the delivery status to delivered
+// Route to change delivery status from pending to delivered
 app.patch('/change_to_delivered/:cartId', (req, res) => {
 
   const cartId = req.params.cartId 
   
-  
-
   const update_delivery_status = {
     is_delivered : true
   }
@@ -157,7 +155,7 @@ app.patch('/change_to_delivered/:cartId', (req, res) => {
 })
 
 
-//routes to change the delivery status to not delivered
+// Routes to change the delivery status back to not-delivered (if changed initially in error)
 app.patch('/change_to_not_delivered/:cartId', (req, res) => {
 
   const cartId = req.params.cartId 
@@ -196,43 +194,29 @@ app.post ('/order-confirmation', (req, res) => {
   const category = req.body.cart.category 
   const subcategory = req.body.cart.subcategory 
   const phone = req.body.phone
-  // const OrderConformation = req.body.OrderConformation
   const is_delivered = false
 
  console.log(req.body)
   let cart = new Cart({
     fullname:fullname,
     address:req.body.address,
-  //   address:[{ 
-  //     street1:street1,
-  //     street2:street2,
-  //     city:city,
-  //     state:state,
-  //     zipcode:zipcode,
-  // }],
     phone: phone,
-    // OrderConformation: OrderConformation,
-   cart:req.body.cart,
+    cart:req.body.cart,
     is_delivered: is_delivered,
-
   })
-  // console.log(cart)
-  // const newTitle = cart.cart.map(item => console.log(item))
-  // console.log(newTitle)
-
 
   cart.save((error) => {
     if(error) {
       res.json({error: 'Unable to save the cart!'})
     } else {
-      res.json({success: true, message: 'New cart Saved'})
+      res.json({success: true, message: 'New cart saved'})
     }
   })
 
 })
 
 
-// stripe payment route 
+// Stripe payment route 
 app.post('/nonmodalpayment', cors(), async (req, res) => {
   let {amount, id} = req.body
   try {
@@ -258,24 +242,24 @@ app.post('/nonmodalpayment', cors(), async (req, res) => {
 })
 
 
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static((path.join(__dirname, 'client/build'))))
-}
-
-
-
+// Listener
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
 
 
-// makes giant server errors concise and simple to read
+// Makes giant server errors concise and simple to read
 process.on('unhandledRejection', (err, promise) => {
   console.log(`Logged Error: ${err}`)
   server.close(() => process.exit(1))
 })
 
+// Needed for proper Heroku deployment
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static((path.join(__dirname, 'client/build'))))
+}
 
+// Needed for proper Heroku deployment
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
  })

@@ -29,23 +29,14 @@ const CARD_OPTIONS = {
 
 const PaymentForm = (props) => {
     const [success, setSuccess] = useState(false)
-    // const [OrderConformation] = useState(Math.random().toString(36).substr(2, 8));
     const stripe = useStripe()
     const elements = useElements()
-
-
     const cart = props.cart 
-    // const OrderConformation1 = props.OrderConformation1 
     const address = props.address 
-
-
     const subtotal = cart.reduce((prev, current) => {
         return prev + current.subtotal
     }, 0)
     let amount = parseInt(subtotal*100)
-    console.log(typeof(amount))
-    console.log(amount)
-
 
 
     const handlesave = () => {
@@ -56,46 +47,28 @@ const PaymentForm = (props) => {
         const city = address.city
         const state = address.state
         const zipcode = address.zipcode
-        // const OrderConformation = OrderConformation1
         const is_delivered = false
-        console.log(address)
     
-        fetch ('/order-confirmation',{
-        method: 'POST',
-        
-        headers: {
-           
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            fullname:fullname,
-            address:address,
-            // address:[{ street1:street1,
-            //     street2:street2,
-            //     city:city,
-            //     state:state,
-            //     zipcode:zipcode,
-            // }],
-            phone: phone,
-            // OrderConformation: OrderConformation,
-            cart:cart,
-            is_delivered: is_delivered,
-
-            
-        })
-    }).then(response => response.json())
-    .then(result => {
+        fetch ('/order-confirmation', {
+            method: 'POST',
+            headers: {          
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                fullname: fullname,
+                address: address,
+                phone: phone,
+                cart:cart,
+                is_delivered: is_delivered,
+            })
+        }).then(response => response.json())
+        .then(result => {
         if(result.success) {
-            
           alert("Your order has been submitted!")
-         
-          
         }
-       
-    }).catch(error => {
-        console.log(error)
-    })
-
+        }).catch(error => {
+            console.log(error)
+        })
     }
 
     const handleSubmit = async (e) => {
@@ -105,7 +78,6 @@ const PaymentForm = (props) => {
             card: elements.getElement(CardElement)
         })
   
-
         if(!error) {
             try {
                 const { id } = paymentMethod
@@ -115,12 +87,11 @@ const PaymentForm = (props) => {
                 })
 
                 if(response.data.success) {
-                    console.log('your payment went through successfully')
+                    console.log('Payment completed successfully.')
                     setSuccess(true)
-                    // props.OrderConformation()
                     handlesave()
-                    
                 }
+
             } catch (error) {
                 console.log('error: ', error)
             }
@@ -163,9 +134,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     return {
         cart: state.cart,
-        address:state.address,
-        // OrderConformation1:state.OrderConformation,
-
+        address:state.address
     }
 }
 

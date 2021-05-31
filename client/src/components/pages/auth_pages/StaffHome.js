@@ -19,17 +19,8 @@ function Staff(props) {
 
 
     var  orders = props.orders
-    console.log(orders)
-    console.log(orders.address)
-    console.log("cart",orders.cart)
+    
     var  orders_cart = props.orders.cart
-
-    // const order_cart_Items = orders_cart.map((items, index) => {
-    //     return<div>
-    //         <h1>{items.title}</h1>
-    //     </div>
-    // })
-
 
 
     let counter8 = 0;
@@ -220,7 +211,7 @@ function Staff(props) {
     .then(result => {
         if(result.success) {
 
-          alert("Delivery Has Been Moved to Pending")
+          alert("Order has been moved back to Pending Orders")
           
             props.onLoadOrders()
         }
@@ -230,15 +221,6 @@ function Staff(props) {
     })
 
     }
-
-
-
-
-    
-
-
-
-
 
 
     return<div>
@@ -251,33 +233,19 @@ function Staff(props) {
            <div>{completed_ordersItems}</div>
            
        </div>
-       {/* <div>
-           {orderItems}
-       </div> */}
     </div>
 }
 
 
 const mapDispatchToProps = (dispatch) => {
     return {
-    //   onLoadProducts: () => dispatch(actionCreators.loadProducts()),
-    //   onLoadUsers: () => dispatch(actionCreators.loadAllUsers()),
-    //   onDelete: (_id) => dispatch(actionCreators.deleteProduct(_id)),
       onLoadOrders: () => dispatch(actionCreators.LoadOrders()),
-  
     }
   }
 
 
 const mapStateToProps = (state) => {
     return {
-        // all_products: state.all_products,
-        // vegetable: state.vegetable,
-        // fruit: state.fruit,
-        // flower: state.flower,
-        // admins: state.admins,
-        // staff : state.staff,
-        // users: state.users,
         orders:state.orders,
         completed_orders:state.completed_orders,
         pending_orders:state.pending_orders,

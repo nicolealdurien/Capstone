@@ -1,14 +1,14 @@
-import Navbar2 from '../Navbar'
+import Navbar from '../Navbar'
 
-const Baselayout = (props) =>  {
+const BaseLayout = (props) => {
 
     return (
         <div>
-            <Navbar2 />
-            {props.children}
+            <Navbar />
+            { props.children }
         </div>
     )
 }
 
 
-export default Baselayout
+export default BaseLayout

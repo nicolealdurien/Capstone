@@ -1,4 +1,3 @@
-// can change any/all class names for CSS...just placeholder stuff
 import '../../css/AllRegisterPages.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'

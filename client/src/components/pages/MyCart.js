@@ -81,19 +81,6 @@ const Mycart = (props) => {
     
     const cartItems = cart.map((cart, index) => {
             
-        // console.log(cart.rate)
-        // console.log(cart.qty)
-
-        // const CartSubTotalItems= (cart.rate) *  (cart.qty)
-        
-        // const handleChange = (e) => {   
-        //     setQty({
-        //         ...Qty,
-        //         [e.target.name]: e.target.value,
-                
-        //     })
-        // }
-        // const subtotal = cart.rate *(Qty.qty)
         return <tbody  key = {cart._id} >
                                     <tr className="cart_item tbody">
                                         <td className="product-remove">
@@ -112,50 +99,18 @@ const Mycart = (props) => {
                                         </td>
                                         <td className="product-quantity">
                                             <div className="quantity">
-                                                {/* <input onChange = {handleChange} type="number"  name="qty" className="input-field" required/> */}
                                                 {cart.qty}
                                             </div>
                                         </td>
-                                        {/* <td className="product-number">
-                                            <span>{cart._id}</span>
-                                        </td> */}
                                         <td className="product-price">
                                             <span className="amount">${cart.rate} /{cart.per}</span>
                                         </td>
                                         <td className="product-subtotal">
-                                            {/* <span className="amount-subtotal">{subtotal}</span> */}
                                             ${cart.subtotal}
                                         </td>
                                     </tr>
                 </tbody>
     })
-
-    // checkout functionality here
-
-    const [stripeTestProduct, setStripeTestProduct] = useState({
-        name: 'hyacinths',
-        rate: 28.29
-    })
-
-    const makePayment = (token, addresses) => {
-        const body = {
-            token,
-            stripeTestProduct
-        }
-        const headers = {
-            'Content-Type': 'application/json',
-        }
-        return fetch(`http://localhost:5000/payment`, {
-            method: 'POST',
-            headers,
-            body: JSON.stringify(body)
-        }).then(response => {
-            console.log('RESPONSE', response)
-            const { status } = response
-            console.log('STATUS', status)
-        }).catch(error => console.log(error))
-    }
-
 
 
     return (
@@ -169,7 +124,6 @@ const Mycart = (props) => {
                                     <tr>
                                         <th colSpan="3" className="product-name">Product</th>
                                         <th className="product-quantity">qty</th>
-                                        {/* <th className="product-number">Product Id</th> */}
                                         <th className="product-price">Price</th>
                                         <th className="product-subtotal">Subtotal</th>
                                     </tr>
@@ -190,7 +144,7 @@ const Mycart = (props) => {
                     <h5 className="small-title" style={{color: 'black', fontSize: '30px', fontWeight: 'bold'}}>Delivery Address</h5>
                     <form>
                         <div class="form-group">
-                            {/* <label for="formGroupExampleInput" style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>Full Nmae</label> */}
+                            {/* <label for="formGroupExampleInput" style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>Full Name</label> */}
                             <input type="text" onChange = {handleAddressChange} name="fullname" class="form-control" id="formGroupname" placeholder="Full name" required/>
                         </div>
                         <div class="form-group">
@@ -253,16 +207,6 @@ const Mycart = (props) => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                {/* <StripeCheckout 
-                                    stripeKey = 'pk_test_51In4ABCDwFUaylUuuSu1e43AVzMfTkMUQq4wu5sU7iTRpVkTjhQD9JxkVTZiZPKQLH0VOtKfVPgVP6naDlrpDx4Z00SDMXekQC'
-                                    amount = {stripeTestProduct.rate *100} 
-                                    token = {makePayment} 
-                                    name = 'FruveFlow Checkout'
-                                    // amount = {Number(getCartSubTotal().toFixed(2))*100}
-                                    shippingAddress
-                                    billingAddress>
-                                    <div><button className = 'btn'>Secure Checkout With Stripe</button></div>
-                                </StripeCheckout> */}
                                 
                             </div></div>
                         </div><br/><br/>

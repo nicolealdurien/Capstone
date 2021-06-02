@@ -6,11 +6,10 @@ import React from 'react';
 import '../css/App.css';
 
 
-const ProductCategoryVegetable = (props) =>{
+const ProductCategoryVegetable = (props) => {
 
 
     useEffect(() => {
-        // console.log("use effect is fired")
         props.onLoadProducts()
     },[])
 
@@ -44,13 +43,6 @@ const vegetableItems = vegetable.map((items, index) => {
                     <b>Price: </b> ${items.rate}/{items.per}
                 </li>
             </ul>
-
-             
-            {/* not yet functional for qty adding */}
-             {/* <button className="add-cart-button" onClick = {() => handleAddToCart(items)}>
-                    <a className="add-cart" class="card-link" ><span><span className="icon_plus"></span></span> Add To Cart</a>
-            </button> */}
-            
             
         </div>
 
@@ -62,18 +54,8 @@ const vegetableItems = vegetable.map((items, index) => {
                 <Link to= {`/product-detail/${items.title}`} class="card-link" className="card-link-details"> More Details </Link>
             </button>
         </div>
-        </div>
-        
-
-
-       
+        </div> 
 })
-
-
-
-
-
-
 
 
     return (

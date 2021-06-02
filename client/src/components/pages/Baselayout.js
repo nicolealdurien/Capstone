@@ -1,10 +1,10 @@
-import Navbar from '../Navbar'
+import NewNavbar from '../Navbar'
 
 const BaseLayout = (props) => {
 
     return (
         <div>
-            <Navbar />
+            <NewNavbar />
             { props.children }
         </div>
     )

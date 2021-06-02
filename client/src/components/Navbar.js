@@ -11,7 +11,7 @@ import {
 import { faTemperatureHigh } from '@fortawesome/free-solid-svg-icons';
 
 
-const Navbar = () => {
+const NewNavbar = () => {
     return (
         <Navbar bg="light" expand="lg">
   <Navbar.Brand href="/" style={{color: "#860286", fontFamily: "'Amatic SC', cursive", fontSize: '2.4rem'}} >FruVe Flow</Navbar.Brand>
@@ -98,4 +98,4 @@ const Navbar = () => {
     )    
 }
 
-export default Navbar
+export default NewNavbar

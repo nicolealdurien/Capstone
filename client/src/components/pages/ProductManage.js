@@ -553,37 +553,25 @@ function ProductManage(props) {
 
 
     const handleDeleteOrder = (items) => {
-        // console.log("deleteOrder is fired")
-        // console.log(items.items._id)
-       const _id = items.items._id
-        // console.log(_id)
+        const _id = items.items._id
         const token = localStorage.getItem('adminToken')
-
 
         fetch (`/admin/delete-order/${_id}`,{
         method: 'DELETE',
         headers: {
-            'authorization':`Bearer ${token}`,
-            
+            'authorization':`Bearer ${token}`, 
         }
-
-        
-        
         }).then(response => response.json())
         .then(result => {
         if(result.success) {
-
-          alert("Order Has Been Deleted")
+          alert("Order has been deleted.")
           props.onLoadProducts()
           props.onLoadUsers()
           props.onLoadOrders()
-
         }
-
         }).catch(error => {
             console.log(error)
         })
-
     }
 
 
@@ -611,14 +599,11 @@ function ProductManage(props) {
     }).then(response => response.json())
     .then(result => {
         if(result.success) {
-
-          alert("Your product has been added to the database!")
-          props.onLoadProducts()
+            alert("Your product was added to the database!")
+            props.onLoadProducts()
             props.onLoadUsers()
             props.onLoadOrders()
-
         }
-
     }).catch(error => {
         console.log(error)
     })
@@ -628,13 +613,11 @@ function ProductManage(props) {
     setProductManage({
         ...ProductManage,
         [e.target.name]: e.target.value,
-
     })
   }
 
   return (
       <div>
-
             <div id="box-admin">
             <>
                 <div id="header">

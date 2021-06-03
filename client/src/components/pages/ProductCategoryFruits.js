@@ -12,7 +12,6 @@ const ProductCategoryFruit = (props) => {
     
 
     useEffect(() => {
-        // console.log("use effect is fired")
         props.onLoadProducts()
     },[])
 
@@ -33,7 +32,6 @@ const handleAddToCart = (product) => {
     for (let i = 0; i < fruit.length; i++) {
         if (fruit[i]) counter2++;
 }
-// console.log(counter2)
 
 
 const fruitItems = fruit.map((items, index) => {

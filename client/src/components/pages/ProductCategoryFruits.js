@@ -1,5 +1,4 @@
 import { connect, useDispatch } from 'react-redux'
-import { onAddToCart } from '../../stores/creators/actionCreators' 
 import * as actionCreators from '../../stores/creators/actionCreators'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -19,7 +18,7 @@ const ProductCategoryFruit = (props) => {
         props.onMoreDetails(items)
     }
 
-const handleAddToCart = (product) => {
+    const handleAddToCart = (product) => {
         props.onAddToCart(product)
         alert("Item has been added to your cart!")
     }
@@ -45,15 +44,6 @@ const fruitItems = fruit.map((items, index) => {
                     <b>Price: </b> ${items.rate}/{items.per}
                 </li>
             </ul>
-
-             
-
-            {/* not yet functional for qty adding */}
-             {/* <button className="add-cart-button" onClick = {() => handleAddToCart(items)}>
-                    <a className="add-cart" class="card-link" ><span><span className="icon_plus"></span></span> Add To Cart</a>
-            </button> */}
-            
-            
         </div>
 
         <div className="card-body" class="card-body">
@@ -65,13 +55,7 @@ const fruitItems = fruit.map((items, index) => {
             </button>
         </div>
         </div>
-        
-
-
-       
 })
-
-
 
 
     return (
@@ -95,8 +79,8 @@ const fruitItems = fruit.map((items, index) => {
 const mapDispatchToProps = (dispatch) => {
     return {
       onLoadProducts: () => dispatch(actionCreators.loadProducts()),
-      onMoreDetails :(items) => dispatch(actionCreators.onMoreDetails(items)),
-      onAddToCart :(items ) => dispatch(actionCreators.onAddToCart(items )) 
+      onMoreDetails: (items) => dispatch(actionCreators.onMoreDetails(items)),
+      onAddToCart: (items) => dispatch(actionCreators.onAddToCart(items)) 
     }
   }
 
@@ -106,8 +90,7 @@ const mapStateToProps = (state) => {
         all_products: state.all_products,
         vegetable: state.vegetable,
         fruit: state.fruit,
-        flower: state.flower,
-
+        flower: state.flower
     }
   }
 

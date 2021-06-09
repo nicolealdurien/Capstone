@@ -1,8 +1,19 @@
-import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { createStore, applyMiddleware, compose } from 'redux'
+import reducer from '../src/stores/reducer';
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import { Router, Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import ReactBreakpoints from 'react-breakpoints'
+// Components
 import App from './components/pages/App';
 import ProductCategoryVegetable from './components/pages/ProductCategoryVegetable'
 import ProductCategoryFruits from './components/pages/ProductCategoryFruits'
@@ -26,19 +37,6 @@ import CustResetPswdPage from './components/pages/auth_pages/CustResetPswdPage'
 import AdminResetPswdPage from './components/pages/auth_pages/AdminResetPswdPage'
 import StaffResetPswdPage from './components/pages/auth_pages/StaffResetPswdPage'
 import ProductUpdate from '../src/components/pages/UpdateProduct'
-import reportWebVitals from './reportWebVitals';
-import { createStore, applyMiddleware, compose } from 'redux'
-import reducer from '../src/stores/reducer';
-import { Provider } from 'react-redux'
-import thunk from 'redux-thunk'
-import { Router, Route, Switch } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import Popper from 'popper.js';
-import ReactBreakpoints from 'react-breakpoints'
-
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

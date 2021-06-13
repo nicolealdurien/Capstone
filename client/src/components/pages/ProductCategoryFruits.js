@@ -8,8 +8,6 @@ import '../css/App.css';
 
 const ProductCategoryFruit = (props) => {
 
-    
-
     useEffect(() => {
         props.onLoadProducts()
     },[])

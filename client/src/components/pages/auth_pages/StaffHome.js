@@ -3,23 +3,13 @@ import { useEffect , useState} from 'react'
 import * as actionCreators from '../../../stores/creators/actionCreators'
 
 
-
-
-
-
-
 function Staff(props) {
 
-
-    useEffect(() => {
-        
+    useEffect(() => {        
         props.onLoadOrders()
     },[])
 
-
-
     var  orders = props.orders
-    
     var  orders_cart = props.orders.cart
 
 
@@ -53,27 +43,15 @@ function Staff(props) {
                      <p><h1>{cartItems.title} - {cartItems.qty}</h1></p>
                      )})}</p>
             </div>
-            
-            <div>
-            <p>Id : {items._id}</p>
-            </div>
-
-            </div>
+        </div>
     })
 
-
-
-
-
     var  completed_orders = props.completed_orders
-    
-
 
     let counter9 = 0;
     for (let i = 0; i < completed_orders.length; i++) {
         if (completed_orders[i]) counter9++;
     }
-    console.log(counter9)
 
     const completed_ordersItems = completed_orders.map((items, index) => {
         return <div className='Column'><div key ={index} className="card" style={{width: "18rem"}}>
@@ -95,15 +73,15 @@ function Staff(props) {
                 <h2>Order Details</h2>
              <div>
                  <p>{items.cart.map(cartItems => {
-                     return(
+                     return (
                      <p><h1>{cartItems.title} - {cartItems.qty}</h1></p>
                      )})}</p>
             </div>
             <div>
-            <button className="deliverbtn" onClick = {() => handleNotDeliveried({items})}><p> Mark As Not Delivered</p></button>
+            <button className="deliverbtn" onClick = {() => handleNotDeliveried({items})}><p> Return To Pending</p></button>
             </div>
             <div>
-            <p>Id : {items._id}</p>
+            <p>Id: {items._id}</p>
             </div>
 
             </div>
@@ -177,7 +155,7 @@ function Staff(props) {
         .then(result => {
         if(result.success) {
 
-          alert("Products Has Been Delivered")
+          alert("Products successfully marked as delivered.")
             
             props.onLoadOrders()
 
@@ -211,7 +189,7 @@ function Staff(props) {
     .then(result => {
         if(result.success) {
 
-          alert("Order has been moved back to Pending Orders")
+          alert("Order has been moved back to Pending Orders.")
           
             props.onLoadOrders()
         }
@@ -225,11 +203,11 @@ function Staff(props) {
 
     return<div>
        <div className='center'>
-           <div><h2>Pending Orders</h2></div>
+           <div className='order-label'><h2>Pending Orders</h2></div>
            <div>{pending_ordersItems}</div>
        </div>
        <div className='center'>
-       <div><h2>Completed Orders</h2></div>
+       <div className='order-label'><h2>Completed Orders</h2></div>
            <div>{completed_ordersItems}</div>
            
        </div>

@@ -34,25 +34,25 @@ const ProductDetails = (props) => {
     const customerToken = localStorage.getItem('customerToken')
 
     return (
-        <div class="card mb-3 bg-success text-white" style={{width: '97vw', border: 'solid 5px black'}}>
+        <div class="card mb-3 bg-success text-white" style={{width: '97vw', border: 'solid 5px black', backgroundColor: '#7ca762'}}>
             <div class="row g-0"style={{height: '98%'}}>
-                <div className="product-details-image" className="col-md-4" style={{height: 'auto', margin: '5px', marginRight: "10px"}}>
-                    <img className="productimg" style={{width: '100%', height: '100%'}} class = 'card-img' src={product.imageurl} alt="..."/>
+                <div className="product-details-image" className="col-md-4" style={{height: 'auto', marginLeft: '10px', marginBottom: '30px'}}>
+                    <img className="productimg" style={{width: '100%', height: '100%'}} class = 'card-img' src={product.imageurl} alt="product"/>
                 </div>
             <div class="col-md-8" style={{fontFamily: "sans-serif", width: '65%'}}>
                 <div class="card-body">
                     <div>
                     <h1 class="card-title" style={{fontSize: '5rem'}}>{product.title}</h1><br/><h1 style={{fontSize: '3rem'}}>$ {product.rate}/{product.per}</h1>
                     </div><br/>
-                    <p class="card-text" style={{fontSize: '20px'}}>{product.description}</p>
+                    <p class="card-text" style={{fontSize: '1.25rem'}}>{product.description}</p>
 
                     <ul>
                     
                     <li>
-                        <p class="card-text" style={{fontSize: '20px'}}><b>Category: </b><i>{product.category}</i></p>
+                        <p class="card-text" style={{fontSize: '1.25rem'}}><b>Category: </b><i>{product.category}</i></p>
                     </li>
                     <li>
-                        <p class="card-text" style={{fontSize: '20px'}}><b>Sub-Category: </b><i>{product.subcategory}</i></p>
+                        <p class="card-text" style={{fontSize: '1.25rem'}}><b>Sub-Category: </b><i>{product.subcategory}</i></p>
                     </li>
                     </ul>
 

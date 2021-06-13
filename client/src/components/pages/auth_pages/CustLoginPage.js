@@ -51,11 +51,11 @@ const CustLoginPage = ({history}) => {
                         <input type='password' required id='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} tabIndex = {2}/>
                     </div>
 
-                    <button type = 'submit' className = 'regbutton' tabIndex = {3}>Login</button>
-
-                    <span className='login-screen__subtext'>Don't have an account? <Link to='/auth/customer-register' className='cust__reg__prompt'>Register</Link></span>
+                    <button type = 'submit' className = 'regbutton' tabIndex = {3}>Log In</button>
+                    <br/>
+                    <span className='login-screen__subtext'>Don't have an account? <Link to='/auth/customer-register' className='cust__reg__prompt'>Register</Link><br/><br/>
+                    Want to check us out a bit more before registering?<br/><Link to = '/guest-login' className="guestloginlink">Login As Guest</Link></span>
                 </form>
-                <br/>
             </div>
     )
 }

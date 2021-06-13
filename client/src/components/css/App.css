@@ -111,7 +111,7 @@
 
 .productimg {
   height: 100%;
-  display: flex
+  display: flex;
 }
 
 .img {
@@ -119,7 +119,6 @@
   size: fill;
   top: 100%;
   height: 100%;
-  
 }
 
 .collapsible {
@@ -164,16 +163,13 @@
   margin: 10px;
   font-size: 15px;
   padding-top: 25px;
-  
 }
 
 #btnsubmit {
   margin: 20px;
   font-family:'Oswald', sans-serif;
   font-style: italic;
-  font-size: 15px;
-  
-  
+  font-size: 15px; 
 }
 
 .clearfix {
@@ -232,7 +228,6 @@
 .proddetailsbutton {
   display: flex;
   flex-direction: wrap;
-  /* min-width: 160px; */
   justify-content: center;
 }
 
@@ -284,7 +279,12 @@
   padding-bottom: 27px;
 }
 
-
 .homepage__reg__button {
+  padding: 10px
+}
+
+.order-label {
+  background-color: #860286;
+  color: white;
   padding: 10px
 }
